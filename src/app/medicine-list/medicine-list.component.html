@@ -1,0 +1,26 @@
+<h3>Medicine List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Medicine Name</th>
+            <th>Disease Name</th>
+            <th>Medicine Time</th>
+            <th>Medicine Consumption Routine</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let medicine of medicines">
+            <td>{{medicine.medicineName}}</td>
+            <td>{{medicine.diseaseName}}</td>
+            <td>{{medicine.medicineTime}}</td>
+            <td>{{medicine.medicineOrder}}</td>
+            <td>
+                <button (click)="updateMedicine(medicine.id)" class="btn btn-info"> Update</button>
+                <button (click)="deleteMedicine(medicine.id)" class="btn btn-danger buttonNext">
+                    Delete</button>
+                <button (click)="medicineDetails(medicine.id)" class="btn btn-warning buttonNext">
+                    View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

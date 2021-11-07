@@ -1,0 +1,33 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Add Medicine Details</h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label> Medicine Name</label>
+            <input title="Medicine Name" type="text" class="form-control" id="medicineName" [(ngModel)]="medicine.medicineName" name="medicineName">
+        </div>
+
+        <div class="form-group">
+            <label> Disease Name</label>
+            <input title="Disease Name" type="text" class="form-control" id="diseaseName" [(ngModel)]="medicine.diseaseName" name="diseaseName">
+        </div>
+
+        <div class="form-group">
+            <label> Medicine Timing</label>
+            <input title="Medicine Time" placeholder="HH:MM:SS" min="00:00:00" max="24:00:00" type=" Time" class="form-control" id="medicineTime" [(ngModel)]="medicine.medicineTime" name="medicineTime">
+        </div>
+
+        <div class="form-group">
+            <label> Medicine Order</label>
+            <select class="control-label" title="Medicine Order" [(ngModel)]="medicine.medicineOrder" name="Medicine Order">
+            <option class="form-control">Morning, Before Food</option>
+            <option class="form-control">Morning, After Food</option>
+            <option class="form-control">Night, Before Food</option>
+            <option class="form-control">Night, After Food</option>
+            </select>
+        </div>
+
+        <button class="btn btn-success mybutton" type="submit">Submit</button>
+
+    </form>
+</div>
